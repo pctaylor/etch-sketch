@@ -1,4 +1,5 @@
 #canvas {
+    display: grid;
     outline: 1px black solid;
     width: 600px;
     height: 600px;

@@ -1,3 +1,26 @@
+//
+const canvas = document.getElementById("canvas");
+for (var i = 0; i < 16; i++) {
+
+    //Create a child div for each loop pass
+    let cell = document.createElement("div");
+
+    // Define the properties of the child div
+    cell.innerHTML = (i);
+    cell.className = "cell";
+    cell.style.border = "2px black solid";
+
+
+    //Append
+    canvas.appendChild(cell);
+}
+
+canvas.style.gridTemplateColumns = "repeat(4, 1fr)";
+canvas.style.gridTemplateRows = "repeat(4, 1fr)";
+
+
+/* by creating rows, then creating columns within each row
+
 // parent div
 const canvas = document.getElementById("canvas");
 
@@ -18,3 +41,5 @@ for (var i = 0; i < 6; i++) {
     //Append
     canvas.appendChild(row);
 }
+
+*/
