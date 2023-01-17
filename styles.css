@@ -1,8 +1,13 @@
 #canvas {
     display: grid;
-    outline: .1px black solid;
-    width: 600px;
-    height: 600px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 1px black solid;
+    width: 75vmin;
+    height: 75vmin;
     overflow: auto;
     font-size: smaller;
+    border-radius: .5%;
 }

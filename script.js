@@ -1,6 +1,5 @@
-//
+// Create an arbitrarily large grid as the display canvas
 const canvas = document.getElementById("canvas");
-
 function createGrid(axisLength) {
     for (var i = 0; i < axisLength**2; i++) {
 
@@ -9,7 +8,7 @@ function createGrid(axisLength) {
 
         // Define the properties of the child div
         cell.className = "cell";
-        cell.style.border = "2px black solid";
+        cell.style.border = "0.01px grey dotted";
 
 
         //Append
@@ -19,27 +18,7 @@ function createGrid(axisLength) {
     canvas.style.setProperty("grid-template-rows", `repeat(${axisLength}, 1fr)`);
 }
 
-/* by creating rows, then creating columns within each row
 
-// parent div
-const canvas = document.getElementById("canvas");
-
-// Add child divs within parent div
-for (var i = 0; i < 6; i++) {
-
-    //Create a child div for each loop pass
-    let row = document.createElement("div");
-
-    // Define the properties of the child div
-    row.innerHTML = (i);
-    row.id = i;
-    row.style.border = "2px black solid";
-    row.style.padding = "20px";
-    row.style.margin = "-2px";
-    row.style.minHeight = "6px";
-
-    //Append
-    canvas.appendChild(row);
-}
-
-*/
+// Let users dictate the size of the canvas
+let inputField = document.getElementById("input-length");
+inputField.addEventListener("keydown", (event) => createGrid(event.key));
