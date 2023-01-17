@@ -1,7 +1,8 @@
 #canvas {
     display: grid;
-    outline: 1px black solid;
+    outline: .1px black solid;
     width: 600px;
     height: 600px;
     overflow: auto;
+    font-size: smaller;
 }

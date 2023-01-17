@@ -1,23 +1,23 @@
 //
 const canvas = document.getElementById("canvas");
-for (var i = 0; i < 16; i++) {
 
-    //Create a child div for each loop pass
-    let cell = document.createElement("div");
+function createGrid(axisLength) {
+    for (var i = 0; i < axisLength**2; i++) {
 
-    // Define the properties of the child div
-    cell.innerHTML = (i);
-    cell.className = "cell";
-    cell.style.border = "2px black solid";
+        //Create a child div for each loop pass
+        let cell = document.createElement("div");
+
+        // Define the properties of the child div
+        cell.className = "cell";
+        cell.style.border = "2px black solid";
 
 
-    //Append
-    canvas.appendChild(cell);
+        //Append
+        canvas.appendChild(cell);
+    }
+    canvas.style.setProperty("grid-template-columns", `repeat(${axisLength}, 1fr)`);
+    canvas.style.setProperty("grid-template-rows", `repeat(${axisLength}, 1fr)`);
 }
-
-canvas.style.gridTemplateColumns = "repeat(4, 1fr)";
-canvas.style.gridTemplateRows = "repeat(4, 1fr)";
-
 
 /* by creating rows, then creating columns within each row
 
