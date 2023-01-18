@@ -11,3 +11,7 @@
     font-size: smaller;
     border-radius: .5%;
 }
+
+body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
